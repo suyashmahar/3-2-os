@@ -1,0 +1,144 @@
+\documentclass[a4,11pt]{article}
+
+
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage{tabularx}
+\usepackage{geometry}
+
+\geometry {
+  a4paper,
+  top=10mm,
+  left=18mm,
+  right=18mm,
+  bottom=25mm,
+}
+
+\hypersetup{
+  colorlinks=true,
+  linkcolor=blue(pigment),
+  filecolor=blue(pigment),      
+  urlcolor=blue(pigment),
+}
+
+\usepackage{fontspec}
+
+%-----------------------------------------------------------
+% Comment the following lines if Adobe Garamond Pro font is
+% not available as `AGaramondPro'
+\setmainfont{AGaramondPro}[
+  UprightFont   = *-Regular,
+  ItalicFont    = *-Italic,
+  BoldFont      = *-Semibold,
+  BoldItalicFont= *-BoldItalic
+]
+%-----------------------------------------------------------
+
+\title{Types of Operating Systems}
+\author{Suyash Mahar \\
+            ECE - 16116069
+}
+
+\date{\today}
+
+\usepackage{multicol}
+\begin{document}
+\maketitle
+
+\begin{multicols}{2}
+  
+  \section{Introduction}
+  Operating systems can be classified into multiple types based on the
+  different functionalities, common types of operating systems are
+  listed below:
+  \begin{enumerate}
+  \item Interactive Operating System
+  \item Real-time Operating System
+  \item Network Operating System
+  \item Application specific Operating System
+  \item Embedded Operating System
+  \item Server Operating System
+  \item Desktop Operating System
+  \item Multi-user Operating System
+  \end{enumerate}
+  \section{Iteractive Operating Systems}
+  Interactive Operating Systems are a class of operating systems which
+  allows user to interact with the operating system. Interactive
+  operating system are either single task or multi-task operating
+  system. These operating systems have a either a \textit{command line
+    interface} or \textit{graphical style interface} for the user.
+  \subsection{Command line interface (CLI) Operating Systems}
+  Command line interface is a Operating System interface where user
+  enters commands as lines of text which are interpreted and executed
+  sequentially.
+
+  \textbf{Example:} MS-DOS
+
+  \subsection{Graphical interface Operating Systems}
+  Another class of interactive operating system is the graphical user
+  interface (GUI) based operating systems. These operating systems
+  provide graphics (icons, menus, windows, etc.) for easier use of the
+  operating system.
+
+  \textbf{Example:} Windows, Linux with X server or Wayland compositor.
+  
+  \section{Real-time Operating Systems}
+  Real time operating systems are a class of operating systems that
+  are for real-time systems. Real-time systems process data as it
+  arrives, any delay introduced by buffers or similar structures is
+  avoided. Example of real time systems are digital signal processors
+  in audio synthesizers, operating systems monitoring sensor data for
+  critical applications like aircraft, neurostimulators, etc.
+
+  \textbf{Example:} FreeRTOS and Xenomai.
+  
+  \section{Network Operating Systems}
+  Network operating system is a kind of operating system which is
+  designed for networking devices like routers, switches, modems,
+  etc. Network operating systems can be considered to be embedded
+  operating systems since they are embedded in network equipments.
+
+  \textbf{Example:} IPOS, PicOS...
+  
+  \section{Application specific Operating Systems (ASOS)}
+  An application specific operating systems is a variation of general
+  purpose operating system which provides limited number of
+  functionalities for a particular application. Being designed for a
+  specific application, the OS has better computational and energy
+  performance compared to a GPOS for that specific task.
+
+  \textbf{Example:} IPOS, PGO...
+  
+  \section{Embedded Operating Systems}
+  An emebedded operating system is an operating system configured for
+  a paticular hardware that is embedded within a larger machine. These
+  operating systems have stronger I/O capabilities to monitor the
+  machine. Embedded operating systems are required to be
+  performance-efficient and resource optimum.
+  
+  \section{Server Operating Systems}
+
+  Server operating systems are a class of operating systems that are
+  designed to work efficiently as a computer server. These operating
+  systems are more effective in handling network and system resources
+  to deliver services and application over a network.
+
+  \textbf{Example:} Windows Server 2012, Red Hat Linux...
+  \section{Desktop Operating Systems}
+  Desktop operating systems are class of operating systems that are
+  designed to be run on desktop computers, these operating system are
+  user friendly and includes utilities to increase productivity in
+  home and office environment.
+
+  \textbf{Example:} Windows 10, Ubuntu 18.04...
+  \section{Multi-user Operating Systems}
+  Any operating systems that allows multiple users to share a common
+  computing resource are reffered to as Multi-user operating
+  system. Most modern operating systems (excluding ASOS and embedded
+  operating systems) are multi-user operating systems. Multi user
+  operating systems brings down the overall establishment cost as it
+  allows sharing of computer hardware.
+
+  \textbf{Example:} Ubuntu, Kubuntu, Windows 10...
+\end{multicols}
+\end{document}
