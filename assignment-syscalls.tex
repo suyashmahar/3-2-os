@@ -1,0 +1,134 @@
+\documentclass[a4,11pt]{article}
+
+\usepackage{graphicx}
+\usepackage{tabularx}
+\usepackage{geometry}
+
+\geometry {
+  a4paper,
+  top=5mm,
+  left=18mm,
+  right=18mm,
+  bottom=15mm,
+}
+
+\usepackage{fontspec}
+
+%-----------------------------------------------------------
+% Comment the following lines if Adobe Garamond Pro font is
+% not available as `AGaramondPro'
+\setmainfont{AGaramondPro}[
+  UprightFont   = *-Regular,
+  ItalicFont    = *-Italic,
+  BoldFont      = *-Semibold,
+  BoldItalicFont= *-BoldItalic
+]
+%-----------------------------------------------------------
+
+\title{System Calls in Linux, Unix and Windows Kernels}
+\author{Suyash Mahar \\
+  ECE - 16116069
+}
+
+\date{\today}
+
+\usepackage{multicol}
+\begin{document}
+
+\maketitle
+
+
+\section{Introduction}
+Both Windows and Linux/Unix support a number of system calls to
+allow a range of interactions with the kernel.
+
+\section{System calls in Linux/Unix}
+Linux kernel supports ~200 system calls, these system calls are
+similar among different Unix based kernels. Common system calls for
+Unix/Linux are listed in Table \ref{table:linux-syscalls}:
+
+\section{System calls in Windows}
+Windows kernel supports ~250 system calls, these system calls'
+functions range from memory management to process control including
+inter-process communication, security and I/O handling. Common system
+calls for Windows kernel are listed in Table \ref{table:windows-syscalls}:
+
+\begin{table}[!h]
+  \centering
+  \label{table:linux-syscalls}
+  \caption{List of common Linux/Unix system calls along with short
+    description of their functions.}
+  \vspace{0.2cm}
+  \begin{tabular}{||l | p{0.6\textwidth}||} 
+    \hline
+
+    \textbf{System Call} & \textbf{Function} \\ [0.5ex] 
+
+    \hline\hline
+
+    exit & Exit syscall is used to terminate the current process \\
+    
+    \hline fork & Creates a copy of the current process as the child
+    of the process that called fork \\
+
+    \hline write & Write content from a buffer to either a file or a
+    device \\
+
+    \hline open & Open system call allows either to open a file,
+    create one if it doesn't exist or truncate to an existing file
+    \\
+
+    \hline close & Closes a file descriptor \\
+
+    \hline chdir & Changes the current working directory of the
+    process \\
+
+    \hline execve & Executes a program by overwriting the caller
+    program, this system call in combination with fork allows
+    execution of a program as a child process\\
+
+    \hline
+  \end{tabular}
+
+\end{table}
+
+\begin{table}[!h]
+  \centering
+  \label{table:windows-syscalls}
+  \caption{List of common Windows system calls along with short
+    description of their functions.}
+  \vspace{0.2cm}
+  \begin{tabular}{||l | p{0.6\textwidth}||} 
+    \hline
+
+    \textbf{System Call} & \textbf{Function} \\ [0.5ex] 
+
+    \hline\hline
+
+    CreateProcess & Creates a new process and starts a specified program \\
+    
+    \hline ExitProcess & Terminates current process \\
+
+    \hline CreateFile & Creates a new file at the specified path \\
+
+    \hline ReadFile & Reads specified number of bytes from a file
+                      handler to a buffer \\
+
+    \hline WriteFile & Writes specified number of bytes from a buffer
+                       to a file handler \\
+
+    \hline CloseHandle & Closes an already opened file handler \\
+
+    \hline SetTimer & Calls a specified function after certain number of milliseconds \\
+
+    \hline ReadConsole & Reads characters from the console input buffer and removes them from it\\
+
+    \hline WriteConsole & Writes at the cursor location a character string \\
+
+    \hline
+  \end{tabular}
+
+\end{table}
+
+
+\end{document}
