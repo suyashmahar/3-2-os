@@ -1,0 +1,94 @@
+\documentclass[a4,11pt]{article}
+
+
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage{tabularx}
+\usepackage{geometry}
+
+\geometry {
+  a4paper,
+  top=10mm,
+  left=18mm,
+  right=18mm,
+  bottom=25mm,
+}
+
+\hypersetup{
+  colorlinks=true,
+  linkcolor=blue(pigment),
+  filecolor=blue(pigment),      
+  urlcolor=blue(pigment),
+}
+
+\usepackage{fontspec}
+
+% -----------------------------------------------------------
+% Comment the following lines if Adobe Garamond Pro font is
+% not available as `AGaramondPro'
+\setmainfont{AGaramondPro}[
+UprightFont   = *-Regular,
+ItalicFont    = *-Italic,
+BoldFont      = *-Semibold,
+BoldItalicFont= *-BoldItalic
+]
+% -----------------------------------------------------------
+
+\title{-Assignment 4.3-\\Various Possibilities on Creating and
+  Terminating a Process}
+\author{Suyash Mahar \\
+  ECE - 16116069 }
+
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\section{Creating a Process}
+On creating a process following possiblilities exists:
+\begin{enumerate}
+\item The parent can continue to execute concurently with its children.
+\item The parent waits until some or all of its children have
+  terminated.
+\end{enumerate}
+
+\subsection*{}
+
+Regarding address space of the child process again two possibilities
+exists for the process:
+
+\begin{enumerate}
+\item The child process has a duplicate address space from the parent. (\textbf{Unix/Linux} style.)
+\item The child process has a new program loaded into it (\textbf{Windows} style).
+\end{enumerate}
+
+\section{Terminating a Process}
+When a process terminates it returns an exit code which represents the
+status of the process when it exited. When this occurs all the
+resources allocated to the process are deallocated by the operating
+system.
+
+Various possibilities during the termination of a process are listed
+below:
+\begin{enumerate}
+\item \textbf{Cascading Termination}: Some systems terminate a
+  process's children as soon as the parent process terminates. This is
+  known as cascading termination. This is done regardless of normal or
+  abnormal exit of the parent.
+
+\item \textbf{Zombie Process}: (\textit{Unix/Linux}) When a child
+  process exits and it's parent process hasn't retrived it's exit
+  status using \textbf{\textit{wait()}} syscall the child processes
+  becomes a zombie process. Such processes are already terminated but
+  their exit status is still maintained by the process table. Such
+  processes are however usually short lived, as soon as the parent
+  calls \textbf{\textit{wait()}} the exit status is returned and the
+  entry from the process table is freed.
+
+\item \textbf{Orphan Process}: When process terminates without waiting
+  (using \textbf{\textit{wait()}} syscall) for it's children to
+  terminate, the children become orphan process. Linux/Unix in such
+  case assigns the \textit{init} process as the new parent of the
+  child processes.
+\end{enumerate}
+\end{document}

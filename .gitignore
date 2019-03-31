@@ -1,0 +1,9 @@
+*~
+*.log
+*.aux
+.idea/
+\#*
+_*
+*.out
+*.gch
+cmake-build-debug/

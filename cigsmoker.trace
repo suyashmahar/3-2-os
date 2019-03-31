@@ -1,0 +1,43 @@
+[       AGENT] Agent A executed
+[    PUSHER_P] pushed
+[    PUSHER_T] Pushed
+[    SMOKER_M] smoked
+[       AGENT] Agent C executed
+[    PUSHER_T] Pushed
+[    PUSHER_M] pushed
+[    SMOKER_P] smoked
+[       AGENT] Agent A executed
+[    PUSHER_T] Pushed
+[    PUSHER_P] pushed
+[    SMOKER_M] smoked
+[    PUSHER_M] pushed
+[       AGENT] Agent B executed
+[    PUSHER_P] pushed
+[    SMOKER_T] smoked
+[       AGENT] Agent C executed
+[    PUSHER_M] pushed
+[    PUSHER_T] Pushed
+[    SMOKER_P] smoked
+[       AGENT] Agent A executed
+[    PUSHER_P] pushed
+[    PUSHER_T] Pushed
+[    SMOKER_M] smoked
+[       AGENT] Agent B executed
+[    PUSHER_P] pushed
+[    PUSHER_M] pushed
+[    SMOKER_T] smoked
+[       AGENT] Agent C executed
+[    PUSHER_T] Pushed
+[    PUSHER_M] pushed
+[    SMOKER_P] smoked
+[       AGENT] Agent A executed
+[    PUSHER_T] Pushed
+[    PUSHER_P] pushed
+[    SMOKER_M] smoked
+[       AGENT] Agent B executed
+[    PUSHER_M] pushed
+[    PUSHER_P] pushed
+[    SMOKER_T] smoked
+[       AGENT] Agent C executed
+[    PUSHER_T] Pushed
+[  SIMULATION] Simulation completed!

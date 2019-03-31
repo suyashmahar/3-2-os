@@ -1,0 +1,77 @@
+\documentclass[a4,11pt]{article}
+
+
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage{tabularx}
+\usepackage{geometry}
+
+\geometry {
+  a4paper,
+  top=10mm,
+  left=18mm,
+  right=18mm,
+  bottom=25mm,
+}
+
+\hypersetup{
+  colorlinks=true,
+  linkcolor=blue(pigment),
+  filecolor=blue(pigment),      
+  urlcolor=blue(pigment),
+}
+
+\usepackage{fontspec}
+
+% -----------------------------------------------------------
+% Comment the following lines if Adobe Garamond Pro font is
+% not available as `AGaramondPro'
+\setmainfont{AGaramondPro}[
+UprightFont   = *-Regular,
+ItalicFont    = *-Italic,
+BoldFont      = *-Semibold,
+BoldItalicFont= *-BoldItalic
+]
+% -----------------------------------------------------------
+
+\title{-Assignment 4-\\Commands for Creating and Terminating a Process}
+\author{Suyash Mahar \\
+  ECE - 16116069
+}
+
+\date{\today}
+
+\begin{document}
+\maketitle
+
+
+\section{Linux/Unix}
+
+\subsection{Process Creation}
+The steps for creating a new process in Unix/Linux are following:
+\begin{enumerate}
+\item \textbf{\textit{fork()}:} First step in creating a new process is to
+  call the \textbf{\textit{fork()}} syscall. This system call creates a new
+  copy of the parent process. This new child process is the exact
+  copy of the parent process.
+\item \textbf{\textit{exec()}:} Next step in the process is to replace the
+  program in the child by the target program.
+\end{enumerate}
+
+\subsection{Process Termination}
+Termination of a process is a single system call in Linux/Unix. Both of which provides the \textbf{\textit{exit()}} syscall. This system call takes an exit code as a parameter which is returned to the parent process.
+
+\section{Windows}
+
+\subsection{Process Creation}
+The steps for creating a new process in Windows is to use the system call \textbf{\textit{CreateProcess()}}, this system call expects a few parameters including the path of the program to execute. This is unlike the \textbf{\textit{fork()}} system call from Unix/Linux which copies the address space and clones the parent.
+
+\subsection{Process Termination}
+There are multiple ways to terminate a process in Windows:
+
+\begin{enumerate}
+\item The first way is to call the \textbf{\textit{ExitProcess}}
+  system call which terminates the current process.
+\item Another way to terminate the proccess is to kill it from a different process using \textbf{\textit{TerminateProcess}} system call. 
+\end{enumerate}
+\end{document}
