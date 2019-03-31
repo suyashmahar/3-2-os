@@ -1,5 +1,3 @@
-#define _GNU_SOURCE
-
 #include "common.h"
 
 #include <pthread.h>
@@ -14,7 +12,7 @@
 #define BUF_SZ 10
 #define PRO_CNT 5
 #define CON_CNT 10
-#define SIM_LEN 1000000 // # items produced by producers combined
+#define SIM_LEN 10 // # items produced by producers combined
 
 /* Global varaiables */
 int    readloc = 0;

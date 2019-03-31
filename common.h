@@ -48,6 +48,7 @@ typedef struct philosopher {
 typedef struct chopstick {
     int id;
     sem_t available;
+    cs_state state;
 } chopstick_t;
 
 typedef struct table {

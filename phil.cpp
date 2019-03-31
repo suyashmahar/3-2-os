@@ -46,7 +46,9 @@ void print_table(table_t *table, int philosopher_count = PHILOSOPHER_COUNT) {
 		cs_state_t state = cs_avail == 1 ? AVAILABLE : BUSY;
 		printf("%c", state == BUSY ? '.' : '|');
 	}
-	printf(" -> %d", hungryq.size());
+	sem_wait(&qmutex);
+	printf(" -> %li", hungryq.size());
+    sem_post(&qmutex);
 	printf("\n");
 	sem_post(&print);
 }
@@ -125,6 +127,7 @@ int main() {
 	while (sem_trywait(&simComplete)) {
 		/* Iterate over all the elements in the queue */
 		std::deque<philosopher_t>::iterator it;
+		sem_wait(&qmutex);
 		for (it = hungryq.begin(); it != hungryq.end(); /*No increment here*/) {
 			long phil = it[0].id;
 			int right_cs = phil;
@@ -136,13 +139,15 @@ int main() {
 
 			if (l_cs_availability & r_cs_availability) {
 				sem_post(&philosophers[phil].allowEating);
-				sem_wait(&qmutex);
+//				sem_wait(&qmutex);
 				hungryq.erase(it); /* Allows the philosopher to be asynchronously removed from the hungry queue */
-				sem_post(&qmutex);
+//				sem_post(&qmutex);
 			} else {
 				it++;
 			}
 		}
+		sem_post(&qmutex);
+		sleep(5);
 	}
 
 	return 0;

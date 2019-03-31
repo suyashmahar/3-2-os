@@ -135,7 +135,7 @@ void *agent(void *vargs) {
 		i_agent(agent);
 
 		char *sig, *msg;
-		asprintf(&sig, "AGENT", agent);
+		asprintf(&sig, "AGENT");
 		asprintf(&msg, "%s executed",
 				 agent == AGENT_A ? "Agent A" : agent == AGENT_B ? "Agent B" : "Agent C");
 		cdbgout(sig, GREEN, msg);

@@ -1,0 +1,19 @@
+Starting simulation...
+0000: T|T|T|T|T|
+0001: T|T|T|T|T|
+0002: T|T|T|T|T|
+0003: T.E.T|T|T|
+0004: T.E.T.E.T|
+0005: T.E.T.E.T|
+0006: T.E.T.E.T|
+0007: T.E.T.E.T|
+0008: T.E.T.E.T|
+0009: T.E.T.E.H|
+
+Stats...
+  id:    eat  think hungry
+   0:      0     10      0
+   1:      7      2      1
+   2:      0     10      0
+   3:      6      3      1
+   4:      0      8      2
