@@ -1,4 +1,4 @@
-all: diningPhilosopher boundedBufferMult cigaretteSmokers
+all: diningPhilosopher boundedBufferMult cigaretteSmokers barber
 
 CXXFLAGS := $(CXXFLAGS)-Wno-write-strings
 
@@ -10,3 +10,6 @@ boundedBufferMult: bbsem_mult.cpp
 
 cigaretteSmokers: cigsmoker.cpp
 	$(CXX) $(CXXFLAGS) cigsmoker.cpp -lpthread -o cigsmoker.out -I.
+
+barber: barber.cpp
+	$(CXX) $(CXXFLAGS) barber.cpp -lpthread -o barber.out -I.

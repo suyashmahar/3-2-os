@@ -143,3 +143,31 @@ Consumer total: 0
 [  SIMULATION] Simulation completed!
 ```
 
+## Sleeping Barber Problem
+### Execution
+```shell
+./barber.out
+```
+
+### Sample Output
+```
+[    CUSTOMER] Entered the shop!
+[    CUSTOMER] Entered the shop!
+[      BARBER] Gave a haircut, q.length=1
+[    CUSTOMER] Entered the shop!
+[      BARBER] Gave a haircut, q.length=1
+[    CUSTOMER] Entered the shop!
+[      BARBER] Gave a haircut, q.length=1
+[      BARBER] Gave a haircut, q.length=0
+[    CUSTOMER] Entered the shop!
+[      BARBER] Gave a haircut, q.length=0
+[    CUSTOMER] Entered the shop!
+[    CUSTOMER] Entered the shop!
+[    CUSTOMER] Entered the shop!
+[      BARBER] Gave a haircut, q.length=2
+[      BARBER] Gave a haircut, q.length=1
+[    CUSTOMER] Entered the shop!
+[    CUSTOMER] Entered the shop!
+[      BARBER] Gave a haircut, q.length=2
+```
+
