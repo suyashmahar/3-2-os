@@ -7,6 +7,7 @@ make all
 # Solutions
 
 ## Dining Philosophers Problem
+[Source Code](assignment7.cc)  
 ### Execution
 ```shell
 ./phil.out
@@ -35,7 +36,8 @@ Stats...
 ```
 
 ## Bounded Buffer Problem
-
+Multiple producer, multiple consumer variant  
+[Source Code](bbsem_mult.cpp)  
 ### Execution
 ```shell
 ./bbsem_mult.out
@@ -92,6 +94,7 @@ Consumer total: 0
 ```
 
 ## Cigarette Smokers Problem
+[Source Code](cigsmoker.cpp)  
 ### Execution
 ```shell
 ./cigsmoker.out
@@ -144,6 +147,7 @@ Consumer total: 0
 ```
 
 ## Sleeping Barber Problem
+[Source Code](barber.cpp)  
 ### Execution
 ```shell
 ./barber.out
